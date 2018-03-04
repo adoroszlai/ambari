@@ -12,7 +12,7 @@ jdk:
   - oraclejdk8
 
 install:
-  - mvn -q -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULES install
+  - mvn -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULES install
 
 script:
   - mvn -B -fae -Del.log=OFF -Drat.skip -DskipTests -pl ambari-utility,ambari-server test # checkstyle
