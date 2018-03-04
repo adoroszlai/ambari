@@ -1,0 +1,18 @@
+language: java
+dist: trusty
+sudo: false
+git:
+  depth: 1
+
+jdk:
+  - openjdk8
+  - oraclejdk8
+
+install:
+  - mvn -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests install
+
+script:
+  - mvn -B -fae -Del.log=OFF -Drat.skip -DskipTests test # checkstyle
+  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.consoleOutput=true -DskipTests test # RAT
+  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipSurefireTests test # Python tests
+  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipPythonTests test # Java tests
