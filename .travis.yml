@@ -21,7 +21,7 @@ git:
 
 env:
   global:
-    - MAVEN_OPTS="-B -fae -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+    - MAVEN_OPTS="-Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
   matrix:
     - MODULE="ambari-agent" TEST_OPTS=""
     - MODULE="ambari-server" TEST_OPTS="-DskipSurefireTests"
@@ -32,7 +32,7 @@ jdk:
   - oraclejdk8
 
 install:
-  - mvn -V -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULE install
+  - mvn -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULE install
 
 script:
-  - mvn -Del.log=OFF -Drat.consoleOutput=true $TEST_OPTS -pl $MODULE test
+  - mvn -B -fae -Del.log=OFF -Drat.consoleOutput=true $TEST_OPTS -pl $MODULE test
