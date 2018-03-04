@@ -4,15 +4,18 @@ sudo: false
 git:
   depth: 1
 
+env:
+  - MODULES="ambari-agent,ambari-server"
+
 jdk:
   - openjdk8
   - oraclejdk8
 
 install:
-  - mvn -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests install
+  - mvn -q -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULES install
 
 script:
-  - mvn -B -fae -Del.log=OFF -Drat.skip -DskipTests test # checkstyle
-  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.consoleOutput=true -DskipTests test # RAT
-  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipSurefireTests test # Python tests
-  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipPythonTests test # Java tests
+  - mvn -B -fae -Del.log=OFF -Drat.skip -DskipTests -pl ambari-utility,ambari-server test # checkstyle
+  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.consoleOutput=true -DskipTests -N test # RAT
+  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipSurefireTests -pl $MODULES test # Python
+  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipPythonTests -pl $MODULES test # Java
