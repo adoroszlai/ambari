@@ -1,3 +1,18 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 language: java
 dist: trusty
 sudo: false
@@ -5,17 +20,17 @@ git:
   depth: 1
 
 env:
-  - MODULES="ambari-agent,ambari-server"
+  - MAVEN_OPTS="-B -fae -Del.log=OFF -Drat.consoleOutput=true -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+  - MODULE="ambari-agent" TEST_OPTS=""
+  - MODULE="ambari-server" TEST_OPTS="-DskipSurefireTests"
+  - MODULE="ambari-server" TEST_OPTS="-Dcheckstyle.skip -Drat.skip -DskipPythonTests"
 
 jdk:
   - openjdk8
   - oraclejdk8
 
 install:
-  - mvn -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULES install
+  - mvn -V -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests -am -pl $MODULE install
 
 script:
-  - mvn -B -fae -Del.log=OFF -Drat.skip -DskipTests -pl ambari-utility,ambari-server test # checkstyle
-  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.consoleOutput=true -DskipTests -N test # RAT
-  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipSurefireTests -pl $MODULES test # Python
-  - mvn -B -fae -Del.log=OFF -Dcheckstyle.skip -Drat.skip -DskipPythonTests -pl $MODULES test # Java
+  - mvn $TEST_OPTS -pl $MODULE test
