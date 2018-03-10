@@ -32,7 +32,7 @@ jdk:
   - oraclejdk8
 
 install:
-  - mvn -V -B -fae -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests clean install
+  - mvn -V -B -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests clean install
 
 script:
-  - mvn -B -fae -Del.log=OFF -Drat.consoleOutput=true -DskipSurefireTests test
+  - mvn -B -Del.log=OFF -Drat.consoleOutput=true -DskipSurefireTests test
