@@ -30,8 +30,7 @@ env:
 jdk:
   - oraclejdk8
 
-install:
-  - mvn -B -Del.log=WARN -Dcheckstyle.skip -Dfindbugs.skip -Dmaven.javadoc.skip -Drat.skip -DskipTests clean install
+install: true
 
 script:
-  - mvn -B -Del.log=OFF -Drat.consoleOutput=true test
+  - mvn -B --fail-fast -Del.log=WARN -Drat.consoleOutput=true clean package
