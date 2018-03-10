@@ -16,6 +16,11 @@
 language: java
 dist: trusty
 sudo: false
+
+cache:
+  directories:
+  - $HOME/.m2
+
 git:
   depth: 1
 
