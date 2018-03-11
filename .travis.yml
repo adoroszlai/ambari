@@ -26,11 +26,14 @@ git:
 
 env:
   - MAVEN_OPTS="-Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+  - YETUS_VERSION="0.7.0"
 
 jdk:
   - oraclejdk8
 
-install: true
+install:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./dev-support/yetus-downloader; fi'
 
 script:
-  - mvn -B --fail-fast -Del.log=WARN -Drat.consoleOutput=true clean package
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./dev-support/test-patch.sh --robot "https://github.com/${TRAVIS_REPO_SLUG}/commit/${TRAVIS_COMMIT}.patch"; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then mvn -B --fail-fast -Del.log=WARN -Drat.consoleOutput=true clean package; fi'

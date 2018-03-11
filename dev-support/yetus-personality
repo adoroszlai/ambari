@@ -1,0 +1,137 @@
+#!/usr/bin/env bash
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+personality_plugins "asflicense,author,checkstyle,javac,junit,maven,pylint,whitespace,xml"
+
+## @description  Globals specific to this personality
+## @audience     private
+## @stability    evolving
+function personality_globals
+{
+  # shellcheck disable=SC2034
+  BUILDTOOL=maven
+  #shellcheck disable=SC2034
+  PATCH_BRANCH_DEFAULT=trunk
+  #shellcheck disable=SC2034
+  PATCH_NAMING_RULE="https://cwiki.apache.org/confluence/display/AMBARI/How+to+Contribute"
+  #shellcheck disable=SC2034
+  JIRA_ISSUE_RE='^AMBARI-[0-9]+$'
+  #shellcheck disable=SC2034
+  GITHUB_REPO="apache/ambari"
+}
+
+## @description  Calculate the actual module ordering
+## @audience     private
+## @stability    evolving
+## @param        ordering
+function ambari_order
+{
+  declare ordering=$1
+  local modules
+
+  if [[ ${ordering} = normal ]]; then
+    modules="${CHANGED_MODULES[*]}"
+  elif [[ ${ordering} = checkstyle ]]; then
+    local module
+    for module in "${CHANGED_MODULES[@]}"; do
+      if [[ -f ${module}/checkstyle.xml ]]; then
+        modules="${modules} ${module}"
+      fi
+    done
+  elif [[ ${ordering} = union ]]; then
+    modules="${CHANGED_UNION_MODULES}"
+  elif [[ ${ordering} = mvnsrc ]]; then
+    modules="${MAVEN_SRC_MODULES[*]}"
+  else
+    modules="${ordering}"
+  fi
+  echo "${modules}"
+}
+
+## @description  Queue up modules for this personality
+## @audience     private
+## @stability    evolving
+## @param        repostatus
+## @param        testtype
+function personality_modules
+{
+  declare repostatus=$1
+  declare testtype=$2
+  declare extra=""
+  declare ordering
+
+  yetus_debug "Personality: ${repostatus} ${testtype}"
+
+  clear_personality_queue
+
+  case ${testtype} in
+    asflicense)
+      # this is not too slow and provides the full path if we do it from
+      # the root of the source
+      personality_enqueue_module .
+      return
+    ;;
+    checkstyle)
+      ordering="checkstyle"
+      extra=""
+    ;;
+    compile)
+      ordering="union"
+      extra="-Dxlint=all"
+    ;;
+    distclean)
+      ordering="."
+    ;;
+    mvninstall)
+      ordering="."
+      extra="-Drat.skip=true -Del.log=WARN"
+
+      local modules="${CHANGED_MODULES[*]}"
+      modules=${modules// /,}
+
+      if [[ "${BUILDMODE}" != full ]]; then
+        extra="${extra} -pl ${modules}"
+        if [[ "${repostatus}" = branch ]]; then
+          # build dependencies, since artifacts are not published to Maven repo
+          extra="${extra} -am"
+        elif [[ "${repostatus}" = patch ]]; then
+          # ideally we should build dependents, to verify the change does not break them, but they may depend on other modules, too
+          # extra="${extra} -amd"
+          :
+        fi
+      fi
+    ;;
+    mvnsite)
+      if [[ "${CHANGED_MODULES[*]}" =~ \. ]]; then
+        ordering="."
+      fi
+    ;;
+    *)
+      if [[ "${BUILDMODE}" = full ]] || [[ "${CHANGED_MODULES[*]}" =~ \. ]]; then
+        ordering="."
+      else
+        ordering="normal"
+      fi
+    ;;
+  esac
+
+  extra="-Ptest-patch ${extra}"
+
+  for module in $(ambari_order ${ordering}); do
+    # shellcheck disable=SC2086
+    personality_enqueue_module ${module} ${extra}
+  done
+}
