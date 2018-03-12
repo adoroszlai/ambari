@@ -78,12 +78,6 @@ function personality_modules
   clear_personality_queue
 
   case ${testtype} in
-    asflicense)
-      # this is not too slow and provides the full path if we do it from
-      # the root of the source
-      personality_enqueue_module .
-      return
-    ;;
     checkstyle)
       ordering="checkstyle"
       extra=""
@@ -114,11 +108,6 @@ function personality_modules
         fi
       fi
     ;;
-    mvnsite)
-      if [[ "${CHANGED_MODULES[*]}" =~ \. ]]; then
-        ordering="."
-      fi
-    ;;
     *)
       if [[ "${BUILDMODE}" = full ]] || [[ "${CHANGED_MODULES[*]}" =~ \. ]]; then
         ordering="."
@@ -127,8 +116,6 @@ function personality_modules
       fi
     ;;
   esac
-
-  extra="-Ptest-patch ${extra}"
 
   for module in $(ambari_order ${ordering}); do
     # shellcheck disable=SC2086
