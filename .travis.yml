@@ -45,6 +45,6 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
-  local-dir: "$USER_PATCH_DIR"
+  local-dir: "$HOME/patch-dir"
   on:
     all_branches: true
