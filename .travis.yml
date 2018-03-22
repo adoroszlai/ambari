@@ -27,6 +27,7 @@ git:
 env:
   global:
     - MAVEN_OPTS="-Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+    - USER_PATCH_DIR="$HOME/patch-dir"
     - YETUS_VERSION="0.7.0"
 
 jdk:
@@ -38,3 +39,12 @@ install:
 script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./dev-support/test-patch.sh --run-tests "https://github.com/${TRAVIS_REPO_SLUG}/commit/${TRAVIS_COMMIT}.patch"; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then mvn -B --fail-fast -Del.log=WARN -Drat.consoleOutput=true clean package; fi'
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: "$USER_PATCH_DIR"
+  on:
+    all_branches: true
