@@ -45,6 +45,6 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
-  local-dir: build-results
+  local-dir: "../../../build-results"
   on:
     all_branches: true
