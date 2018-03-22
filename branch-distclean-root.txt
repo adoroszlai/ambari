@@ -1,0 +1,362 @@
+Thu Mar 22 15:53:15 UTC 2018
+cd /home/travis/build/adoroszlai/ambari
+mvn clean -DskipTests=true
+Picked up _JAVA_OPTIONS: -Xmx2048m -Xms512m
+4093 [INFO] Scanning for projects...
+5064 [INFO] ------------------------------------------------------------------------
+5064 [INFO] Reactor Build Order:
+5065 [INFO] 
+5065 [INFO] Ambari Main
+5065 [INFO] Apache Ambari Project POM
+5065 [INFO] Ambari Web
+5065 [INFO] Ambari Views
+5065 [INFO] Ambari Admin View
+5065 [INFO] ambari-utility
+5065 [INFO] ambari-metrics
+5066 [INFO] Ambari Metrics Common
+5066 [INFO] Ambari Metrics Hadoop Sink
+5066 [INFO] Ambari Metrics Flume Sink
+5066 [INFO] Ambari Metrics Kafka Sink
+5066 [INFO] Ambari Metrics Storm Sink
+5066 [INFO] Ambari Metrics Storm Sink (Legacy)
+5066 [INFO] Ambari Metrics Collector
+5066 [INFO] Ambari Metrics Monitor
+5067 [INFO] Ambari Metrics Grafana
+5067 [INFO] Ambari Metrics Host Aggregator
+5067 [INFO] Ambari Metrics Assembly
+5067 [INFO] Ambari Service Advisor
+5067 [INFO] Ambari Server
+5067 [INFO] Ambari Functional Tests
+5067 [INFO] Ambari Agent
+5067 [INFO] ambari-logsearch
+5068 [INFO] Ambari Logsearch Appender
+5068 [INFO] Ambari Logsearch Config Api
+5068 [INFO] Ambari Logsearch Config Zookeeper
+5068 [INFO] Ambari Logsearch Log Feeder Plugin Api
+5068 [INFO] Ambari Logsearch Log Feeder
+5068 [INFO] Ambari Logsearch Web
+5068 [INFO] Ambari Logsearch Server
+5068 [INFO] Ambari Logsearch Assembly
+5068 [INFO] Ambari Logsearch Integration Test
+5069 [INFO] ambari-infra
+5069 [INFO] Ambari Infra Solr Client
+5069 [INFO] Ambari Infra Solr Plugin
+5069 [INFO] Ambari Infra Manager
+5069 [INFO] Ambari Infra Assembly
+5069 [INFO] Ambari Infra Manager Integration Tests
+5085 [INFO] 
+5086 [INFO] ------------------------------------------------------------------------
+5086 [INFO] Building Ambari Main 2.0.0.0-SNAPSHOT
+5086 [INFO] ------------------------------------------------------------------------
+5232 [INFO] 
+5233 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari ---
+5313 [INFO] Deleting /home/travis/build/adoroszlai/ambari (includes = [**/*.pyc], excludes = [])
+5995 [INFO] 
+5995 [INFO] ------------------------------------------------------------------------
+5996 [INFO] Building Apache Ambari Project POM 2.0.0.0-SNAPSHOT
+5996 [INFO] ------------------------------------------------------------------------
+5997 [INFO] 
+5997 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-project ---
+6000 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-project (includes = [**/*.pyc], excludes = [])
+6001 [INFO] 
+6001 [INFO] ------------------------------------------------------------------------
+6001 [INFO] Building Ambari Web 2.0.0.0-SNAPSHOT
+6001 [INFO] ------------------------------------------------------------------------
+6020 [INFO] 
+6020 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-web ---
+6022 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-web (includes = [**/*.pyc], excludes = [])
+6083 [INFO] 
+6083 [INFO] --- exec-maven-plugin:1.2.1:exec (clean-rmdir) @ ambari-web ---
+6484 [INFO] 
+6484 [INFO] --- exec-maven-plugin:1.2.1:exec (clean-mkdir) @ ambari-web ---
+6496 [INFO] 
+6497 [INFO] ------------------------------------------------------------------------
+6497 [INFO] Building Ambari Views 2.0.0.0-SNAPSHOT
+6497 [INFO] ------------------------------------------------------------------------
+6498 [INFO] 
+6498 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-views ---
+6501 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-views (includes = [**/*.pyc], excludes = [])
+6518 [INFO] 
+6518 [INFO] ------------------------------------------------------------------------
+6518 [INFO] Building Ambari Admin View 2.0.0.0-SNAPSHOT
+6518 [INFO] ------------------------------------------------------------------------
+6519 [INFO] 
+6519 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-admin ---
+6521 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-admin (includes = [**/*.pyc], excludes = [])
+6525 [INFO] 
+6525 [INFO] ------------------------------------------------------------------------
+6525 [INFO] Building ambari-utility 1.0.0.0-SNAPSHOT
+6525 [INFO] ------------------------------------------------------------------------
+6527 [INFO] 
+6527 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-utility ---
+6529 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-utility (includes = [**/*.pyc], excludes = [])
+6530 [INFO] 
+6530 [INFO] ------------------------------------------------------------------------
+6531 [INFO] Building ambari-metrics 2.0.0.0-SNAPSHOT
+6531 [INFO] ------------------------------------------------------------------------
+6546 [INFO] 
+6546 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics ---
+6586 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics (includes = [**/*.pyc], excludes = [])
+6624 [INFO] 
+6624 [INFO] ------------------------------------------------------------------------
+6625 [INFO] Building Ambari Metrics Common 2.0.0.0-SNAPSHOT
+6625 [INFO] ------------------------------------------------------------------------
+6626 [INFO] 
+6627 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-common ---
+6629 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-common (includes = [**/*.pyc], excludes = [])
+6631 [INFO] 
+6631 [INFO] ------------------------------------------------------------------------
+6631 [INFO] Building Ambari Metrics Hadoop Sink 2.0.0.0-SNAPSHOT
+6632 [INFO] ------------------------------------------------------------------------
+6633 [INFO] 
+6633 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-hadoop-sink ---
+6635 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-hadoop-sink (includes = [**/*.pyc], excludes = [])
+6637 [INFO] 
+6637 [INFO] ------------------------------------------------------------------------
+6637 [INFO] Building Ambari Metrics Flume Sink 2.0.0.0-SNAPSHOT
+6637 [INFO] ------------------------------------------------------------------------
+6638 [INFO] 
+6638 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-flume-sink ---
+6641 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-flume-sink (includes = [**/*.pyc], excludes = [])
+6642 [INFO] 
+6642 [INFO] ------------------------------------------------------------------------
+6642 [INFO] Building Ambari Metrics Kafka Sink 2.0.0.0-SNAPSHOT
+6642 [INFO] ------------------------------------------------------------------------
+6644 [INFO] 
+6644 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-kafka-sink ---
+6646 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-kafka-sink (includes = [**/*.pyc], excludes = [])
+6647 [INFO] 
+6648 [INFO] ------------------------------------------------------------------------
+6648 [INFO] Building Ambari Metrics Storm Sink 2.0.0.0-SNAPSHOT
+6648 [INFO] ------------------------------------------------------------------------
+6649 [INFO] 
+6649 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-storm-sink ---
+6652 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-storm-sink (includes = [**/*.pyc], excludes = [])
+6653 [INFO] 
+6653 [INFO] ------------------------------------------------------------------------
+6653 [INFO] Building Ambari Metrics Storm Sink (Legacy) 2.0.0.0-SNAPSHOT
+6653 [INFO] ------------------------------------------------------------------------
+6655 [INFO] 
+6655 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-storm-sink-legacy ---
+6657 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-storm-sink-legacy (includes = [**/*.pyc], excludes = [])
+6658 [INFO] 
+6658 [INFO] ------------------------------------------------------------------------
+6658 [INFO] Building Ambari Metrics Collector 2.0.0.0-SNAPSHOT
+6658 [INFO] ------------------------------------------------------------------------
+6661 [INFO] 
+6661 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-timelineservice ---
+6663 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-timelineservice (includes = [**/*.pyc], excludes = [])
+6674 [INFO] 
+6674 [INFO] ------------------------------------------------------------------------
+6674 [INFO] Building Ambari Metrics Monitor 2.0.0.0-SNAPSHOT
+6674 [INFO] ------------------------------------------------------------------------
+6687 [INFO] 
+6687 [INFO] --- maven-clean-plugin:2.6:clean (default-clean) @ ambari-metrics-host-monitoring ---
+6737 [INFO] 
+6738 [INFO] ------------------------------------------------------------------------
+6738 [INFO] Building Ambari Metrics Grafana 2.1.0.0.0
+6738 [INFO] ------------------------------------------------------------------------
+6739 [INFO] 
+6739 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-grafana ---
+6742 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-grafana (includes = [**/*.pyc], excludes = [])
+6743 [INFO] 
+6743 [INFO] ------------------------------------------------------------------------
+6743 [INFO] Building Ambari Metrics Host Aggregator 2.0.0.0-SNAPSHOT
+6743 [INFO] ------------------------------------------------------------------------
+6744 [INFO] 
+6744 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-host-aggregator ---
+6746 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-host-aggregator (includes = [**/*.pyc], excludes = [])
+6748 [INFO] 
+6748 [INFO] ------------------------------------------------------------------------
+6748 [INFO] Building Ambari Metrics Assembly 2.0.0.0-SNAPSHOT
+6748 [INFO] ------------------------------------------------------------------------
+6749 [INFO] 
+6750 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-metrics-assembly ---
+6751 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-metrics/ambari-metrics-assembly (includes = [**/*.pyc], excludes = [])
+6752 [INFO] 
+6752 [INFO] ------------------------------------------------------------------------
+6752 [INFO] Building Ambari Service Advisor 1.0.0.0-SNAPSHOT
+6753 [INFO] ------------------------------------------------------------------------
+6758 [INFO] 
+6758 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-serviceadvisor ---
+6876 [INFO] 
+6876 [INFO] ------------------------------------------------------------------------
+6876 [INFO] Building Ambari Server 2.0.0.0-SNAPSHOT
+6876 [INFO] ------------------------------------------------------------------------
+6921 [INFO] 
+6921 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-server ---
+6971 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-server (includes = [**/*.pyc], excludes = [])
+7252 [INFO] 
+7252 [INFO] ------------------------------------------------------------------------
+7252 [INFO] Building Ambari Functional Tests 2.0.0.0-SNAPSHOT
+7252 [INFO] ------------------------------------------------------------------------
+7255 [INFO] 
+7255 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-funtest ---
+7259 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-funtest (includes = [**/*.pyc], excludes = [])
+7287 [INFO] 
+7295 [INFO] ------------------------------------------------------------------------
+7295 [INFO] Building Ambari Agent 2.0.0.0-SNAPSHOT
+7296 [INFO] ------------------------------------------------------------------------
+7299 [INFO] 
+7300 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-agent ---
+7353 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-agent (includes = [**/*.pyc], excludes = [])
+7380 [INFO] 
+7380 [INFO] ------------------------------------------------------------------------
+7380 [INFO] Building ambari-logsearch 2.0.0.0-SNAPSHOT
+7380 [INFO] ------------------------------------------------------------------------
+7380 [INFO] 
+7380 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch ---
+7382 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch (includes = [**/*.pyc], excludes = [])
+7415 [INFO] 
+7415 [INFO] ------------------------------------------------------------------------
+7415 [INFO] Building Ambari Logsearch Appender 2.0.0.0-SNAPSHOT
+7415 [INFO] ------------------------------------------------------------------------
+7416 [INFO] 
+7416 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-appender ---
+7421 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-appender (includes = [**/*.pyc], excludes = [])
+7423 [INFO] 
+7423 [INFO] ------------------------------------------------------------------------
+7423 [INFO] Building Ambari Logsearch Config Api 2.0.0.0-SNAPSHOT
+7423 [INFO] ------------------------------------------------------------------------
+7428 [INFO] 
+7428 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-config-api ---
+7430 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-config-api (includes = [**/*.pyc], excludes = [])
+7432 [INFO] 
+7432 [INFO] ------------------------------------------------------------------------
+7432 [INFO] Building Ambari Logsearch Config Zookeeper 2.0.0.0-SNAPSHOT
+7432 [INFO] ------------------------------------------------------------------------
+7435 [INFO] 
+7435 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-config-zookeeper ---
+7444 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-config-zookeeper (includes = [**/*.pyc], excludes = [])
+7445 [INFO] 
+7445 [INFO] ------------------------------------------------------------------------
+7445 [INFO] Building Ambari Logsearch Log Feeder Plugin Api 2.0.0.0-SNAPSHOT
+7445 [INFO] ------------------------------------------------------------------------
+7446 [INFO] 
+7446 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-logfeeder-plugin-api ---
+7448 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-logfeeder-plugin-api (includes = [**/*.pyc], excludes = [])
+7448 [INFO] 
+7448 [INFO] ------------------------------------------------------------------------
+7448 [INFO] Building Ambari Logsearch Log Feeder 2.0.0.0-SNAPSHOT
+7448 [INFO] ------------------------------------------------------------------------
+7450 [INFO] 
+7450 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-logfeeder ---
+7451 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-logfeeder (includes = [**/*.pyc], excludes = [])
+7453 [INFO] 
+7453 [INFO] ------------------------------------------------------------------------
+7453 [INFO] Building Ambari Logsearch Web 2.0.0.0-SNAPSHOT
+7453 [INFO] ------------------------------------------------------------------------
+7453 [INFO] 
+7454 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-web ---
+7468 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-web (includes = [**/*.pyc], excludes = [])
+7475 [INFO] 
+7475 [INFO] ------------------------------------------------------------------------
+7475 [INFO] Building Ambari Logsearch Server 2.0.0.0-SNAPSHOT
+7475 [INFO] ------------------------------------------------------------------------
+7476 [INFO] 
+7477 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-server ---
+7478 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-server (includes = [**/*.pyc], excludes = [])
+7491 [INFO] 
+7491 [INFO] ------------------------------------------------------------------------
+7491 [INFO] Building Ambari Logsearch Assembly 2.0.0.0-SNAPSHOT
+7491 [INFO] ------------------------------------------------------------------------
+7492 [INFO] 
+7492 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-assembly ---
+7494 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-assembly (includes = [**/*.pyc], excludes = [])
+7494 [INFO] 
+7494 [INFO] ------------------------------------------------------------------------
+7494 [INFO] Building Ambari Logsearch Integration Test 2.0.0.0-SNAPSHOT
+7494 [INFO] ------------------------------------------------------------------------
+7495 [INFO] 
+7495 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-logsearch-it ---
+7496 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-it (includes = [**/*.pyc], excludes = [])
+7497 [INFO] 
+7497 [INFO] ------------------------------------------------------------------------
+7497 [INFO] Building ambari-infra 2.0.0.0-SNAPSHOT
+7497 [INFO] ------------------------------------------------------------------------
+7497 [INFO] 
+7497 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-infra ---
+7498 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-infra (includes = [**/*.pyc], excludes = [])
+7513 [INFO] 
+7513 [INFO] ------------------------------------------------------------------------
+7513 [INFO] Building Ambari Infra Solr Client 2.0.0.0-SNAPSHOT
+7513 [INFO] ------------------------------------------------------------------------
+7514 [INFO] 
+7514 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-infra-solr-client ---
+7516 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-infra/ambari-infra-solr-client (includes = [**/*.pyc], excludes = [])
+7517 [INFO] 
+7518 [INFO] ------------------------------------------------------------------------
+7518 [INFO] Building Ambari Infra Solr Plugin 2.0.0.0-SNAPSHOT
+7518 [INFO] ------------------------------------------------------------------------
+7519 [INFO] 
+7519 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-infra-solr-plugin ---
+7522 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-infra/ambari-infra-solr-plugin (includes = [**/*.pyc], excludes = [])
+7522 [INFO] 
+7522 [INFO] ------------------------------------------------------------------------
+7522 [INFO] Building Ambari Infra Manager 2.0.0.0-SNAPSHOT
+7522 [INFO] ------------------------------------------------------------------------
+7533 [INFO] 
+7533 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-infra-manager ---
+7535 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-infra/ambari-infra-manager (includes = [**/*.pyc], excludes = [])
+7539 [INFO] 
+7539 [INFO] ------------------------------------------------------------------------
+7539 [INFO] Building Ambari Infra Assembly 2.0.0.0-SNAPSHOT
+7539 [INFO] ------------------------------------------------------------------------
+7540 [INFO] 
+7540 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-infra-assembly ---
+7542 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-infra/ambari-infra-assembly (includes = [**/*.pyc], excludes = [])
+7543 [INFO] 
+7543 [INFO] ------------------------------------------------------------------------
+7543 [INFO] Building Ambari Infra Manager Integration Tests 2.0.0.0-SNAPSHOT
+7543 [INFO] ------------------------------------------------------------------------
+7544 [INFO] 
+7544 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ambari-infra-manager-it ---
+7546 [INFO] Deleting /home/travis/build/adoroszlai/ambari/ambari-infra/ambari-infra-manager-it (includes = [**/*.pyc], excludes = [])
+7546 [INFO] ------------------------------------------------------------------------
+7546 [INFO] Reactor Summary:
+7546 [INFO] 
+7547 [INFO] Ambari Main ........................................ SUCCESS [  0.910 s]
+7547 [INFO] Apache Ambari Project POM .......................... SUCCESS [  0.006 s]
+7547 [INFO] Ambari Web ......................................... SUCCESS [  0.495 s]
+7547 [INFO] Ambari Views ....................................... SUCCESS [  0.022 s]
+7548 [INFO] Ambari Admin View .................................. SUCCESS [  0.007 s]
+7548 [INFO] ambari-utility ..................................... SUCCESS [  0.005 s]
+7548 [INFO] ambari-metrics ..................................... SUCCESS [  0.094 s]
+7548 [INFO] Ambari Metrics Common .............................. SUCCESS [  0.007 s]
+7548 [INFO] Ambari Metrics Hadoop Sink ......................... SUCCESS [  0.006 s]
+7548 [INFO] Ambari Metrics Flume Sink .......................... SUCCESS [  0.005 s]
+7548 [INFO] Ambari Metrics Kafka Sink .......................... SUCCESS [  0.005 s]
+7549 [INFO] Ambari Metrics Storm Sink .......................... SUCCESS [  0.006 s]
+7549 [INFO] Ambari Metrics Storm Sink (Legacy) ................. SUCCESS [  0.005 s]
+7549 [INFO] Ambari Metrics Collector ........................... SUCCESS [  0.015 s]
+7549 [INFO] Ambari Metrics Monitor ............................. SUCCESS [  0.063 s]
+7549 [INFO] Ambari Metrics Grafana ............................. SUCCESS [  0.006 s]
+7549 [INFO] Ambari Metrics Host Aggregator ..................... SUCCESS [  0.005 s]
+7549 [INFO] Ambari Metrics Assembly ............................ SUCCESS [  0.004 s]
+7549 [INFO] Ambari Service Advisor ............................. SUCCESS [  0.124 s]
+7550 [INFO] Ambari Server ...................................... SUCCESS [  0.375 s]
+7550 [INFO] Ambari Functional Tests ............................ SUCCESS [  0.035 s]
+7550 [INFO] Ambari Agent ....................................... SUCCESS [  0.092 s]
+7550 [INFO] ambari-logsearch ................................... SUCCESS [  0.036 s]
+7550 [INFO] Ambari Logsearch Appender .......................... SUCCESS [  0.008 s]
+7550 [INFO] Ambari Logsearch Config Api ........................ SUCCESS [  0.009 s]
+7550 [INFO] Ambari Logsearch Config Zookeeper .................. SUCCESS [  0.013 s]
+7550 [INFO] Ambari Logsearch Log Feeder Plugin Api ............. SUCCESS [  0.003 s]
+7551 [INFO] Ambari Logsearch Log Feeder ........................ SUCCESS [  0.005 s]
+7551 [INFO] Ambari Logsearch Web ............................... SUCCESS [  0.022 s]
+7551 [INFO] Ambari Logsearch Server ............................ SUCCESS [  0.016 s]
+7551 [INFO] Ambari Logsearch Assembly .......................... SUCCESS [  0.003 s]
+7551 [INFO] Ambari Logsearch Integration Test .................. SUCCESS [  0.003 s]
+7551 [INFO] ambari-infra ....................................... SUCCESS [  0.016 s]
+7552 [INFO] Ambari Infra Solr Client ........................... SUCCESS [  0.004 s]
+7552 [INFO] Ambari Infra Solr Plugin ........................... SUCCESS [  0.005 s]
+7552 [INFO] Ambari Infra Manager ............................... SUCCESS [  0.017 s]
+7552 [INFO] Ambari Infra Assembly .............................. SUCCESS [  0.004 s]
+7552 [INFO] Ambari Infra Manager Integration Tests ............. SUCCESS [  0.003 s]
+7552 [INFO] ------------------------------------------------------------------------
+7552 [INFO] BUILD SUCCESS
+7552 [INFO] ------------------------------------------------------------------------
+7552 [INFO] Total time: 3.499 s
+7553 [INFO] Finished at: 2018-03-22T15:53:23Z
+7689 [INFO] Final Memory: 18M/619M
+7689 [INFO] ------------------------------------------------------------------------

@@ -1,0 +1,979 @@
+Thu Mar 22 15:53:28 UTC 2018
+cd /home/travis/build/adoroszlai/ambari
+mvn -fn apache-rat:check
+Picked up _JAVA_OPTIONS: -Xmx2048m -Xms512m
+1803 [INFO] Scanning for projects...
+2815 [INFO] ------------------------------------------------------------------------
+2816 [INFO] Reactor Build Order:
+2816 [INFO] 
+2816 [INFO] Ambari Main
+2821 [INFO] Apache Ambari Project POM
+2822 [INFO] Ambari Web
+2822 [INFO] Ambari Views
+2823 [INFO] Ambari Admin View
+2823 [INFO] ambari-utility
+2823 [INFO] ambari-metrics
+2823 [INFO] Ambari Metrics Common
+2824 [INFO] Ambari Metrics Hadoop Sink
+2824 [INFO] Ambari Metrics Flume Sink
+2824 [INFO] Ambari Metrics Kafka Sink
+2824 [INFO] Ambari Metrics Storm Sink
+2824 [INFO] Ambari Metrics Storm Sink (Legacy)
+2824 [INFO] Ambari Metrics Collector
+2824 [INFO] Ambari Metrics Monitor
+2824 [INFO] Ambari Metrics Grafana
+2824 [INFO] Ambari Metrics Host Aggregator
+2825 [INFO] Ambari Metrics Assembly
+2825 [INFO] Ambari Service Advisor
+2825 [INFO] Ambari Server
+2825 [INFO] Ambari Functional Tests
+2825 [INFO] Ambari Agent
+2825 [INFO] ambari-logsearch
+2825 [INFO] Ambari Logsearch Appender
+2825 [INFO] Ambari Logsearch Config Api
+2825 [INFO] Ambari Logsearch Config Zookeeper
+2825 [INFO] Ambari Logsearch Log Feeder Plugin Api
+2825 [INFO] Ambari Logsearch Log Feeder
+2825 [INFO] Ambari Logsearch Web
+2826 [INFO] Ambari Logsearch Server
+2826 [INFO] Ambari Logsearch Assembly
+2826 [INFO] Ambari Logsearch Integration Test
+2826 [INFO] ambari-infra
+2826 [INFO] Ambari Infra Solr Client
+2826 [INFO] Ambari Infra Solr Plugin
+2826 [INFO] Ambari Infra Manager
+2826 [INFO] Ambari Infra Assembly
+2827 [INFO] Ambari Infra Manager Integration Tests
+3052 [INFO] 
+3052 [INFO] ------------------------------------------------------------------------
+3052 [INFO] Building Ambari Main 2.0.0.0-SNAPSHOT
+3053 [INFO] ------------------------------------------------------------------------
+3060 [INFO] 
+3061 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari ---
+3857 [INFO] Enabled default license matchers.
+3860 [INFO] Will parse SCM ignores for exclusions...
+3861 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/.gitignore
+3865 [INFO] Finished adding exclusions from SCM ignore files.
+3865 [INFO] 102 implicit excludes (use -debug for more details).
+3865 [INFO] Exclude: .github/
+3865 [INFO] Exclude: **/repo_*.j2
+3866 [INFO] Exclude: **/ambari-log4j.spec
+3866 [INFO] Exclude: **/version.txt
+3866 [INFO] Exclude: **/release.txt
+3866 [INFO] Exclude: **/*.list
+3866 [INFO] Exclude: **/hdp_mon_nagios_addons.conf
+3869 [INFO] Exclude: **/*.json
+3869 [INFO] Exclude: **/*.svg
+3869 [INFO] Exclude: derby.log
+3870 [INFO] Exclude: CHANGES.txt
+3870 [INFO] Exclude: pass.txt
+3870 [INFO] Exclude: contrib/ambari-scom/msi/src/GUI_Ambari.sln
+3870 [INFO] Exclude: contrib/fast-hdfs-resource/dependency-reduced-pom.xml
+3870 [INFO] Exclude: contrib/agent-simulator/docker_image/package_list.txt
+3870 [INFO] Exclude: contrib/agent-simulator/config/cluster.txt
+3870 [INFO] Exclude: version
+3870 [INFO] Exclude: **/.idea/
+3870 [INFO] Exclude: **/.classpath/
+3870 [INFO] Exclude: **/.project/
+3870 [INFO] Exclude: **/.settings/
+3870 [INFO] Exclude: .git/
+3870 [INFO] Exclude: .pydevproject
+3870 [INFO] Exclude: **/.gitattributes
+3870 [INFO] Exclude: **/.gitkeep
+3870 [INFO] Exclude: **/.jshintrc
+3871 [INFO] Exclude: **/.editorconfig
+3871 [INFO] Exclude: .DS_Store
+3871 [INFO] Exclude: *.pyc
+3871 [INFO] Exclude: *.py~
+3871 [INFO] Exclude: .hg
+3871 [INFO] Exclude: .hgignore
+3871 [INFO] Exclude: .hgtags
+3871 [INFO] Exclude: **/.bowerrc
+3871 [INFO] Exclude: **/robots.txt
+3871 [INFO] Exclude: **/rat.txt
+3871 [INFO] Exclude: ambari-common/src/test/python/mock/**
+3871 [INFO] Exclude: ambari-common/src/test/python/coilmq/**
+3871 [INFO] Exclude: ambari-common/src/main/python/ambari_jinja2/**
+3871 [INFO] Exclude: ambari-common/src/main/python/jinja2/**
+3871 [INFO] Exclude: ambari-common/src/main/python/ambari_simplejson/**
+3871 [INFO] Exclude: ambari-common/src/main/python/ambari_commons/subprocess32.py
+3871 [INFO] Exclude: ambari-common/src/main/python/ambari_commons/_posixsubprocess.so
+3871 [INFO] Exclude: ambari-common/src/main/python/ambari_stomp/**
+3871 [INFO] Exclude: ambari-common/src/main/python/ambari_ws4py/**
+3871 [INFO] Exclude: ambari-web/node_modules/**
+3871 [INFO] Exclude: contrib/management-packs/hdf-ambari-mpack/src/main/resources/stacks/HDF/2.0/hooks/before-START/files/fast-hdfs-resource.jar
+3872 [INFO] Exclude: contrib/ambari-scom/management-pack/Hadoop_MP/**
+3872 [INFO] Exclude: contrib/addons/test/dataServices/jmx/data/cluster_configuration.json.nohbase
+3872 [INFO] Exclude: contrib/ambari-scom/msi/src/GUI_Ambari.sln
+3874 [INFO] Exclude: contrib/ambari-scom/ambari-scom-server/pass.txt
+3875 [INFO] Exclude: contrib/ambari-scom/*/rat.txt
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/.bowerrc
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/bower_components/**
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/node/**
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/node_modules/**
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/public/**
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/vendor/**
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/tests/**/public/**
+3875 [INFO] Exclude: contrib/views/commons/src/main/resources/ui/*/tests/**/vendor/**
+3875 [INFO] Exclude: contrib/views/hive-next/src/main/resources/ui/hive-web/vendor/codemirror/**
+3875 [INFO] Exclude: contrib/views/hive-next/src/main/resources/ui/hive-web/.bowerrc
+3875 [INFO] Exclude: contrib/views/hive20/src/main/resources/ui/vendor/codemirror/**
+3875 [INFO] Exclude: contrib/views/hive20/src/main/resources/ui/.bowerrc
+3875 [INFO] Exclude: contrib/views/hive20/src/main/resources/ui/public/fonts/roboto/**
+3876 [INFO] Exclude: contrib/views/files/src/main/resources/ui/.bowerrc
+3878 [INFO] Exclude: contrib/views/files/src/main/resources/ui/bower_components/**
+3878 [INFO] Exclude: contrib/views/files/src/main/resources/ui/node/**
+3878 [INFO] Exclude: contrib/views/files/src/main/resources/ui/node_modules/**
+3880 [INFO] Exclude: contrib/views/files/src/main/resources/ui/public/**
+3880 [INFO] Exclude: contrib/views/files/src/main/resources/ui/vendor/**
+3880 [INFO] Exclude: contrib/views/files/src/main/resources/ui/runner.js
+3880 [INFO] Exclude: contrib/views/files/src/main/resources/ui/app/assets/stylesheets/**
+3886 [INFO] Exclude: contrib/views/files/src/main/resources/ui/app/assets/javascripts/**
+3886 [INFO] Exclude: contrib/views/jobs/src/main/resources/ui/.tmp/**
+3886 [INFO] Exclude: contrib/views/jobs/src/main/resources/ui/**/bower_components/**
+3886 [INFO] Exclude: contrib/views/jobs/src/main/resources/ui/dist/**
+3887 [INFO] Exclude: contrib/views/jobs/src/main/resources/ui/node/**
+3887 [INFO] Exclude: contrib/views/jobs/src/main/resources/ui/node_modules/**
+3887 [INFO] Exclude: contrib/views/jobs/src/main/resources/ui/**/.bowerrc
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/public/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/node_modules/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/node/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/bower_components/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/vendor/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/app/assets/static/stylesheets/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/app/assets/static/javascripts/**
+3887 [INFO] Exclude: contrib/views/pig/src/main/resources/ui/pig-web/runner.js
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/public/**
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/node_modules/**
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/vendor/**
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/app/assets/stylesheets/**
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/app/assets/javascripts/**
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/bower_components/**
+3887 [INFO] Exclude: contrib/views/slider/src/main/resources/ui/runner.js
+3887 [INFO] Exclude: contrib/views/storm/src/main/resources/ui/.*
+3887 [INFO] Exclude: contrib/views/storm/src/main/resources/ui/node_modules/**
+3887 [INFO] Exclude: contrib/views/storm/src/main/resources/ui/public/**
+3888 [INFO] Exclude: contrib/views/storm/src/main/resources/ui/app/styles/**
+3888 [INFO] Exclude: contrib/addons/package/deb/nagios_addon_deb_control
+3888 [INFO] Exclude: contrib/addons/src/addOns/nagios/conf.d/hdp_mon_nagios_addons.conf
+3888 [INFO] Exclude: contrib/views/*/.classpath
+3888 [INFO] Exclude: contrib/views/*/.project
+3888 [INFO] Exclude: contrib/views/*/.settings/**
+3888 [INFO] Exclude: contrib/views/capacity-scheduler/src/main/resources/ui/app/**
+3888 [INFO] Exclude: contrib/views/capacity-scheduler/src/main/resources/ui/runner.js
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/.bowerrc
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/bower_components/**
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/node/**
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/node_modules/**
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/public/**
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/vendor/**
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/runner.js
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/app/assets/stylesheets/**
+3888 [INFO] Exclude: contrib/views/hueambarimigration/src/main/resources/ui/hueambarimigration-view/app/assets/javascripts/**
+3888 [INFO] Exclude: contrib/ambari-scom/ambari-scom-server/pass.txt
+3888 [INFO] Exclude: contrib/ambari-scom/*/rat.txt
+3889 [INFO] Exclude: **/velocity.log*
+3889 [INFO] Exclude: **/createDDL.jdbc
+3889 [INFO] Exclude: **/yarn.lock
+4532 [INFO] 2958 resources included (use -debug for more details)
+6296 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 2915 licenses.
+6297 [INFO] 
+6297 [INFO] ------------------------------------------------------------------------
+6297 [INFO] Building Apache Ambari Project POM 2.0.0.0-SNAPSHOT
+6297 [INFO] ------------------------------------------------------------------------
+6299 [INFO] 
+6299 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-project ---
+6303 [INFO] Enabled default license matchers.
+6303 [INFO] Will parse SCM ignores for exclusions...
+6303 [INFO] Finished adding exclusions from SCM ignore files.
+6303 [INFO] 61 implicit excludes (use -debug for more details).
+6303 [INFO] No excludes explicitly specified.
+6304 [INFO] 8 resources included (use -debug for more details)
+6389 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 8 licenses.
+6389 [INFO] 
+6389 [INFO] ------------------------------------------------------------------------
+6389 [INFO] Building Ambari Web 2.0.0.0-SNAPSHOT
+6389 [INFO] ------------------------------------------------------------------------
+6449 [INFO] 
+6449 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-web ---
+6453 [INFO] Enabled default license matchers.
+6453 [INFO] Will parse SCM ignores for exclusions...
+6453 [INFO] Finished adding exclusions from SCM ignore files.
+6453 [INFO] 61 implicit excludes (use -debug for more details).
+6453 [INFO] Exclude: .idea/**
+6454 [INFO] Exclude: package.json
+6454 [INFO] Exclude: public/**
+6454 [INFO] Exclude: public-static/**
+6454 [INFO] Exclude: app/assets/**
+6454 [INFO] Exclude: api-docs/**
+6454 [INFO] Exclude: vendor/**
+6454 [INFO] Exclude: node_modules/**
+6454 [INFO] Exclude: node/**
+6454 [INFO] Exclude: npm-debug.log
+6454 [INFO] Exclude: yarn.lock
+6492 [INFO] 1655 resources included (use -debug for more details)
+7084 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1655 licenses.
+7084 [INFO] 
+7084 [INFO] ------------------------------------------------------------------------
+7084 [INFO] Building Ambari Views 2.0.0.0-SNAPSHOT
+7085 [INFO] ------------------------------------------------------------------------
+7086 [INFO] 
+7086 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-views ---
+7089 [INFO] Enabled default license matchers.
+7089 [INFO] Will parse SCM ignores for exclusions...
+7089 [INFO] Finished adding exclusions from SCM ignore files.
+7089 [INFO] 61 implicit excludes (use -debug for more details).
+7089 [INFO] Exclude: **/*.json
+7089 [INFO] Exclude: **/*.iml
+7089 [INFO] Exclude: **/*.lst
+7089 [INFO] Exclude: **/rat.txt
+7097 [INFO] 137 resources included (use -debug for more details)
+7158 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 123 licenses.
+7158 [INFO] 
+7158 [INFO] ------------------------------------------------------------------------
+7158 [INFO] Building Ambari Admin View 2.0.0.0-SNAPSHOT
+7158 [INFO] ------------------------------------------------------------------------
+7164 [INFO] 
+7164 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-admin ---
+7169 [INFO] Enabled default license matchers.
+7169 [INFO] Will parse SCM ignores for exclusions...
+7169 [INFO] Finished adding exclusions from SCM ignore files.
+7169 [INFO] 61 implicit excludes (use -debug for more details).
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/bower_components/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/dist/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/node/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/app/assets/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/node_modules/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/app/bower_components/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/test/bower_components/**
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/mock.js
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/bower.json
+7169 [INFO] Exclude: src/main/resources/ui/admin-web/test/bower.json
+7170 [INFO] Exclude: src/main/resources/ui/admin-web/test/.bowerrc
+7170 [INFO] Exclude: src/main/resources/ui/admin-web/.bowerrc
+7170 [INFO] Exclude: src/main/resources/ui/admin-web/package.json
+7170 [INFO] Exclude: src/main/resources/ui/admin-web/.jshintrc
+7170 [INFO] Exclude: src/main/resources/ui/admin-web/.idea/**
+7173 [INFO] 130 resources included (use -debug for more details)
+7215 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 130 licenses.
+7216 [INFO] 
+7216 [INFO] ------------------------------------------------------------------------
+7216 [INFO] Building ambari-utility 1.0.0.0-SNAPSHOT
+7216 [INFO] ------------------------------------------------------------------------
+7217 [INFO] 
+7217 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-utility ---
+7219 [INFO] Enabled default license matchers.
+7219 [INFO] Will parse SCM ignores for exclusions...
+7219 [INFO] Finished adding exclusions from SCM ignore files.
+7219 [INFO] 61 implicit excludes (use -debug for more details).
+7219 [INFO] No excludes explicitly specified.
+7220 [INFO] 21 resources included (use -debug for more details)
+7240 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 21 licenses.
+7240 [INFO] 
+7240 [INFO] ------------------------------------------------------------------------
+7240 [INFO] Building ambari-metrics 2.0.0.0-SNAPSHOT
+7240 [INFO] ------------------------------------------------------------------------
+7279 [INFO] 
+7279 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics ---
+7422 [INFO] Enabled default license matchers.
+7425 [INFO] Will parse SCM ignores for exclusions...
+7426 [INFO] Finished adding exclusions from SCM ignore files.
+7426 [INFO] 73 implicit excludes (use -debug for more details).
+7426 [INFO] Exclude: pass.txt
+7426 [INFO] Exclude: derby.log
+7426 [INFO] Exclude: **/*.nuspec
+7426 [INFO] Exclude: **/*.json
+7450 [INFO] 7 resources included (use -debug for more details)
+7515 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 7 licenses.
+7516 [INFO] 
+7516 [INFO] ------------------------------------------------------------------------
+7516 [INFO] Building Ambari Metrics Common 2.0.0.0-SNAPSHOT
+7516 [INFO] ------------------------------------------------------------------------
+7522 [INFO] 
+7522 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-common ---
+7527 [INFO] Enabled default license matchers.
+7527 [INFO] Will parse SCM ignores for exclusions...
+7527 [INFO] Finished adding exclusions from SCM ignore files.
+7527 [INFO] 61 implicit excludes (use -debug for more details).
+7527 [INFO] Exclude: pass.txt
+7527 [INFO] Exclude: derby.log
+7527 [INFO] Exclude: **/*.nuspec
+7527 [INFO] Exclude: **/*.json
+7530 [INFO] 34 resources included (use -debug for more details)
+7591 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 34 licenses.
+7591 [INFO] 
+7591 [INFO] ------------------------------------------------------------------------
+7591 [INFO] Building Ambari Metrics Hadoop Sink 2.0.0.0-SNAPSHOT
+7591 [INFO] ------------------------------------------------------------------------
+7602 [INFO] 
+7602 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-hadoop-sink ---
+7605 [INFO] Enabled default license matchers.
+7605 [INFO] Will parse SCM ignores for exclusions...
+7605 [INFO] Finished adding exclusions from SCM ignore files.
+7605 [INFO] 61 implicit excludes (use -debug for more details).
+7605 [INFO] Exclude: pass.txt
+7605 [INFO] Exclude: derby.log
+7607 [INFO] Exclude: **/*.nuspec
+7607 [INFO] Exclude: **/*.json
+7607 [INFO] 5 resources included (use -debug for more details)
+7661 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 5 licenses.
+7661 [INFO] 
+7661 [INFO] ------------------------------------------------------------------------
+7661 [INFO] Building Ambari Metrics Flume Sink 2.0.0.0-SNAPSHOT
+7661 [INFO] ------------------------------------------------------------------------
+7662 [INFO] 
+7662 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-flume-sink ---
+7667 [INFO] Enabled default license matchers.
+7667 [INFO] Will parse SCM ignores for exclusions...
+7667 [INFO] Finished adding exclusions from SCM ignore files.
+7667 [INFO] 61 implicit excludes (use -debug for more details).
+7667 [INFO] Exclude: pass.txt
+7667 [INFO] Exclude: derby.log
+7667 [INFO] Exclude: **/*.nuspec
+7667 [INFO] Exclude: **/*.json
+7670 [INFO] 6 resources included (use -debug for more details)
+7750 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 6 licenses.
+7750 [INFO] 
+7751 [INFO] ------------------------------------------------------------------------
+7751 [INFO] Building Ambari Metrics Kafka Sink 2.0.0.0-SNAPSHOT
+7751 [INFO] ------------------------------------------------------------------------
+7762 [INFO] 
+7762 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-kafka-sink ---
+7764 [INFO] Enabled default license matchers.
+7764 [INFO] Will parse SCM ignores for exclusions...
+7764 [INFO] Finished adding exclusions from SCM ignore files.
+7764 [INFO] 61 implicit excludes (use -debug for more details).
+7764 [INFO] Exclude: pass.txt
+7764 [INFO] Exclude: derby.log
+7764 [INFO] Exclude: **/*.nuspec
+7764 [INFO] Exclude: **/*.json
+7765 [INFO] 8 resources included (use -debug for more details)
+7782 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 8 licenses.
+7782 [INFO] 
+7782 [INFO] ------------------------------------------------------------------------
+7783 [INFO] Building Ambari Metrics Storm Sink 2.0.0.0-SNAPSHOT
+7783 [INFO] ------------------------------------------------------------------------
+7789 [INFO] 
+7789 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-storm-sink ---
+7791 [INFO] Enabled default license matchers.
+7791 [INFO] Will parse SCM ignores for exclusions...
+7791 [INFO] Finished adding exclusions from SCM ignore files.
+7791 [INFO] 61 implicit excludes (use -debug for more details).
+7792 [INFO] Exclude: pass.txt
+7792 [INFO] Exclude: derby.log
+7792 [INFO] Exclude: **/*.nuspec
+7792 [INFO] Exclude: **/*.json
+7792 [INFO] 6 resources included (use -debug for more details)
+7806 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 6 licenses.
+7807 [INFO] 
+7807 [INFO] ------------------------------------------------------------------------
+7807 [INFO] Building Ambari Metrics Storm Sink (Legacy) 2.0.0.0-SNAPSHOT
+7807 [INFO] ------------------------------------------------------------------------
+7808 [INFO] 
+7808 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-storm-sink-legacy ---
+7810 [INFO] Enabled default license matchers.
+7810 [INFO] Will parse SCM ignores for exclusions...
+7810 [INFO] Finished adding exclusions from SCM ignore files.
+7810 [INFO] 61 implicit excludes (use -debug for more details).
+7810 [INFO] Exclude: pass.txt
+7810 [INFO] Exclude: derby.log
+7810 [INFO] Exclude: **/*.nuspec
+7810 [INFO] Exclude: **/*.json
+7811 [INFO] 5 resources included (use -debug for more details)
+7833 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 5 licenses.
+7833 [INFO] 
+7833 [INFO] ------------------------------------------------------------------------
+7833 [INFO] Building Ambari Metrics Collector 2.0.0.0-SNAPSHOT
+7834 [INFO] ------------------------------------------------------------------------
+7851 [INFO] 
+7851 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-timelineservice ---
+7853 [INFO] Enabled default license matchers.
+7853 [INFO] Will parse SCM ignores for exclusions...
+7853 [INFO] Finished adding exclusions from SCM ignore files.
+7854 [INFO] 61 implicit excludes (use -debug for more details).
+7854 [INFO] Exclude: conf/unix/metrics_whitelist
+7854 [INFO] Exclude: conf/unix/amshbase_metrics_whitelist
+7854 [INFO] Exclude: conf/windows/metrics_whitelist
+7854 [INFO] Exclude: conf/windows/amshbase_metrics_whitelist
+7861 [INFO] 222 resources included (use -debug for more details)
+7959 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 197 licenses.
+7960 [INFO] 
+7960 [INFO] ------------------------------------------------------------------------
+7960 [INFO] Building Ambari Metrics Monitor 2.0.0.0-SNAPSHOT
+7960 [INFO] ------------------------------------------------------------------------
+7971 [INFO] 
+7971 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-host-monitoring ---
+7973 [INFO] Enabled default license matchers.
+7973 [INFO] Will parse SCM ignores for exclusions...
+7973 [INFO] Finished adding exclusions from SCM ignore files.
+7973 [INFO] 61 implicit excludes (use -debug for more details).
+7973 [INFO] Exclude: conf/unix/metric_groups.conf
+7973 [INFO] Exclude: conf/windows/metric_groups.conf
+7973 [INFO] Exclude: src/main/python/psutil/**
+7974 [INFO] Exclude: .pydevproject
+7978 [INFO] 28 resources included (use -debug for more details)
+8033 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 28 licenses.
+8033 [INFO] 
+8033 [INFO] ------------------------------------------------------------------------
+8033 [INFO] Building Ambari Metrics Grafana 2.1.0.0.0
+8033 [INFO] ------------------------------------------------------------------------
+8034 [INFO] 
+8034 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-grafana ---
+8037 [INFO] Enabled default license matchers.
+8037 [INFO] Will parse SCM ignores for exclusions...
+8037 [INFO] Finished adding exclusions from SCM ignore files.
+8037 [INFO] 61 implicit excludes (use -debug for more details).
+8037 [INFO] Exclude: conf/unix/ams-grafana.ini
+8037 [INFO] Exclude: **/*.json
+8040 [INFO] 34 resources included (use -debug for more details)
+8077 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 11 licenses.
+8077 [INFO] 
+8077 [INFO] ------------------------------------------------------------------------
+8077 [INFO] Building Ambari Metrics Host Aggregator 2.0.0.0-SNAPSHOT
+8077 [INFO] ------------------------------------------------------------------------
+8078 [INFO] 
+8078 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-host-aggregator ---
+8080 [INFO] Enabled default license matchers.
+8080 [INFO] Will parse SCM ignores for exclusions...
+8080 [INFO] Finished adding exclusions from SCM ignore files.
+8080 [INFO] 61 implicit excludes (use -debug for more details).
+8081 [INFO] Exclude: pass.txt
+8081 [INFO] Exclude: derby.log
+8081 [INFO] Exclude: **/*.nuspec
+8081 [INFO] Exclude: **/*.json
+8083 [INFO] 15 resources included (use -debug for more details)
+8113 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 15 licenses.
+8113 [INFO] 
+8113 [INFO] ------------------------------------------------------------------------
+8113 [INFO] Building Ambari Metrics Assembly 2.0.0.0-SNAPSHOT
+8113 [INFO] ------------------------------------------------------------------------
+8114 [INFO] 
+8114 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-metrics-assembly ---
+8117 [INFO] Enabled default license matchers.
+8117 [INFO] Will parse SCM ignores for exclusions...
+8117 [INFO] Finished adding exclusions from SCM ignore files.
+8117 [INFO] 61 implicit excludes (use -debug for more details).
+8117 [INFO] Exclude: pass.txt
+8117 [INFO] Exclude: derby.log
+8117 [INFO] Exclude: **/*.nuspec
+8117 [INFO] Exclude: **/*.json
+8118 [INFO] 21 resources included (use -debug for more details)
+8149 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 21 licenses.
+8149 [INFO] 
+8149 [INFO] ------------------------------------------------------------------------
+8149 [INFO] Building Ambari Service Advisor 1.0.0.0-SNAPSHOT
+8149 [INFO] ------------------------------------------------------------------------
+8168 [INFO] 
+8168 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-serviceadvisor ---
+8303 [INFO] Enabled default license matchers.
+8306 [INFO] Will parse SCM ignores for exclusions...
+8307 [INFO] Finished adding exclusions from SCM ignore files.
+8307 [INFO] 61 implicit excludes (use -debug for more details).
+8307 [INFO] No excludes explicitly specified.
+8310 [INFO] 3 resources included (use -debug for more details)
+8431 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 3 licenses.
+8431 [INFO] 
+8431 [INFO] ------------------------------------------------------------------------
+8433 [INFO] Building Ambari Server 2.0.0.0-SNAPSHOT
+8433 [INFO] ------------------------------------------------------------------------
+8566 [INFO] 
+8566 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-server ---
+8814 [INFO] Enabled default license matchers.
+8818 [INFO] Will parse SCM ignores for exclusions...
+8819 [INFO] Finished adding exclusions from SCM ignore files.
+8819 [INFO] 61 implicit excludes (use -debug for more details).
+8819 [INFO] Exclude: pass.txt
+8819 [INFO] Exclude: src/test/resources/version
+8819 [INFO] Exclude: src/test/resources/users.ldif
+8819 [INFO] Exclude: src/test/resources/temporal_ganglia_data.txt
+8819 [INFO] Exclude: src/test/resources/users.ldif
+8819 [INFO] Exclude: src/test/resources/mpacks_replay.log
+8819 [INFO] Exclude: src/test/python/stacks/2.5/HIVE/*.txt
+8819 [INFO] Exclude: src/test/python/mpacks/mystack-ambari-mpack-1.0.0.1/stacks/MYSTACK/3.0/services/SERVICEC/dashboards/service-metrics/STORM.txt
+8819 [INFO] Exclude: src/test/python/uninstall/dashboards/files/STORM.txt
+8819 [INFO] Exclude: src/main/resources/hive-schema-0.10.0.oracle.sql
+8819 [INFO] Exclude: src/main/resources/hive-schema-0.12.0.oracle.sql
+8819 [INFO] Exclude: src/main/resources/db/serial
+8820 [INFO] Exclude: src/main/resources/db/index.txt
+8820 [INFO] Exclude: src/main/resources/stacks/HDP/2.1.GlusterFS/services/YARN/package/templates/exclude_hosts_list.j2
+8820 [INFO] Exclude: src/main/windows/ambari-server.cmd
+8820 [INFO] Exclude: src/main/windows/ambari-server.ps1
+8820 [INFO] Exclude: src/main/package/choco/ambari-server.nuspec
+8820 [INFO] Exclude: **/smoketest_metrics.json.j2
+8820 [INFO] Exclude: **/service-metrics/*.txt
+8820 [INFO] Exclude: **/balancer.log
+8820 [INFO] Exclude: **/balancer-err.log
+8820 [INFO] Exclude: /home/travis/build/adoroszlai/ambari/ambari-server/docs/api/generated//**
+8820 [INFO] Exclude: **/SMARTSENSE/**
+8820 [INFO] Exclude: conf/unix/ca.config
+8820 [INFO] Exclude: conf/unix/krb5JAASLogin.conf
+8820 [INFO] Exclude: conf/windows/ca.config
+8820 [INFO] Exclude: conf/windows/krb5JAASLogin.conf
+8820 [INFO] Exclude: **/*.json
+8820 [INFO] Exclude: **/*.sql
+8820 [INFO] Exclude: **/repo_suse_rhel.j2
+8820 [INFO] Exclude: **/repo_debian.j2
+8820 [INFO] Exclude: **/cluster.properties.j2
+8820 [INFO] Exclude: **/repo_ubuntu.j2
+8820 [INFO] Exclude: **/.pydev*
+8820 [INFO] Exclude: **/.hash
+8820 [INFO] Exclude: src/main/resources/db/newcerts/**
+8820 [INFO] Exclude: src/main/resources/stacks/HDP/2.0._/services/HBASE/package/templates/regionservers.j2
+8820 [INFO] Exclude: src/main/resources/stacks/HDPWIN/2.1/services/*/configuration*/*
+8820 [INFO] Exclude: src/test/resources/TestAmbaryServer.samples/**
+8820 [INFO] Exclude: src/test/resources/*.txt
+8820 [INFO] Exclude: src/test/resources/users_for_dn_with_space.ldif
+8820 [INFO] Exclude: src/test/resources/users_with_duplicate_uid.ldif
+8820 [INFO] Exclude: **/velocity.log*
+8820 [INFO] Exclude: **/createDDL.jdbc
+9196 [INFO] 5769 resources included (use -debug for more details)
+10956 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 5759 licenses.
+10956 [INFO] 
+10956 [INFO] ------------------------------------------------------------------------
+10956 [INFO] Building Ambari Functional Tests 2.0.0.0-SNAPSHOT
+10956 [INFO] ------------------------------------------------------------------------
+10967 [INFO] 
+10967 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-funtest ---
+10970 [INFO] Enabled default license matchers.
+10970 [INFO] Will parse SCM ignores for exclusions...
+10970 [INFO] Finished adding exclusions from SCM ignore files.
+10970 [INFO] 61 implicit excludes (use -debug for more details).
+10970 [INFO] Exclude: src/test/resources/version
+10970 [INFO] Exclude: src/test/resources/os_family.json
+10970 [INFO] Exclude: src/test/resources/stacks/**
+10970 [INFO] Exclude: derby.log
+10987 [INFO] 47 resources included (use -debug for more details)
+11023 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 47 licenses.
+11023 [INFO] 
+11023 [INFO] ------------------------------------------------------------------------
+11023 [INFO] Building Ambari Agent 2.0.0.0-SNAPSHOT
+11023 [INFO] ------------------------------------------------------------------------
+11058 [INFO] 
+11058 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-agent ---
+11273 [INFO] Enabled default license matchers.
+11277 [INFO] Will parse SCM ignores for exclusions...
+11278 [INFO] Finished adding exclusions from SCM ignore files.
+11278 [INFO] 61 implicit excludes (use -debug for more details).
+11278 [INFO] Exclude: conf/unix/logging.conf.sample
+11278 [INFO] Exclude: conf/windows/logging.conf.sample
+11278 [INFO] Exclude: src/test/python/tmp_hostcheck.result
+11279 [INFO] Exclude: src/examples/*
+11279 [INFO] Exclude: src/test/python/dummy*.txt
+11279 [INFO] Exclude: src/test/python/ambari_agent/dummy_files/*
+11279 [INFO] Exclude: src/test/python/ambari_agent/dummy*.txt
+11279 [INFO] Exclude: src/main/python/ambari_agent/imports.txt
+11279 [INFO] Exclude: src/main/python/ambari_agent/apscheduler/**
+11279 [INFO] Exclude: **/*.erb
+11279 [INFO] Exclude: **/*.json
+11279 [INFO] Exclude: **/*.pydevproject
+11279 [INFO] Exclude: src/main/package/choco/ambari-agent.nuspec
+11279 [INFO] Exclude: **/dependency-reduced-pom.xml
+11303 [INFO] 178 resources included (use -debug for more details)
+11474 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 178 licenses.
+11475 [INFO] 
+11475 [INFO] ------------------------------------------------------------------------
+11475 [INFO] Building ambari-logsearch 2.0.0.0-SNAPSHOT
+11475 [INFO] ------------------------------------------------------------------------
+11487 [INFO] 
+11487 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch ---
+11491 [INFO] Enabled default license matchers.
+11491 [INFO] Will parse SCM ignores for exclusions...
+11491 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/.gitignore
+11491 [INFO] Finished adding exclusions from SCM ignore files.
+11491 [INFO] 78 implicit excludes (use -debug for more details).
+11491 [INFO] Exclude: **/README.md
+11491 [INFO] Exclude: **/*.json
+11491 [INFO] Exclude: **/*.log
+11491 [INFO] Exclude: **/*.txt
+11491 [INFO] Exclude: **/*.story
+11491 [INFO] Exclude: **/*.editorconfig
+11491 [INFO] Exclude: **/src/vendor/**
+11492 [INFO] Exclude: **/yarn.lock
+11492 [INFO] Exclude: **/docker/Profile
+11492 [INFO] Exclude: **/docker/.env
+11492 [INFO] Exclude: **/docker/knox/**
+11492 [INFO] Exclude: **/node_modules/**
+11492 [INFO] Exclude: **/dist/**
+11529 [INFO] 25 resources included (use -debug for more details)
+11551 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 25 licenses.
+11552 [INFO] 
+11552 [INFO] ------------------------------------------------------------------------
+11552 [INFO] Building Ambari Logsearch Appender 2.0.0.0-SNAPSHOT
+11552 [INFO] ------------------------------------------------------------------------
+11552 [INFO] 
+11552 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-appender ---
+11556 [INFO] Enabled default license matchers.
+11556 [INFO] Will parse SCM ignores for exclusions...
+11556 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-appender/.gitignore
+11556 [INFO] Finished adding exclusions from SCM ignore files.
+11556 [INFO] 63 implicit excludes (use -debug for more details).
+11556 [INFO] Exclude: **/README.md
+11556 [INFO] Exclude: **/*.json
+11556 [INFO] Exclude: **/*.log
+11556 [INFO] Exclude: **/*.txt
+11556 [INFO] Exclude: **/*.story
+11556 [INFO] Exclude: **/*.editorconfig
+11556 [INFO] Exclude: **/src/vendor/**
+11556 [INFO] Exclude: **/yarn.lock
+11556 [INFO] Exclude: **/docker/Profile
+11556 [INFO] Exclude: **/docker/.env
+11557 [INFO] Exclude: **/docker/knox/**
+11557 [INFO] Exclude: **/node_modules/**
+11557 [INFO] Exclude: **/dist/**
+11558 [INFO] 8 resources included (use -debug for more details)
+11588 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 8 licenses.
+11588 [INFO] 
+11588 [INFO] ------------------------------------------------------------------------
+11588 [INFO] Building Ambari Logsearch Config Api 2.0.0.0-SNAPSHOT
+11588 [INFO] ------------------------------------------------------------------------
+11589 [INFO] 
+11589 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-config-api ---
+11595 [INFO] Enabled default license matchers.
+11595 [INFO] Will parse SCM ignores for exclusions...
+11595 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-config-api/.gitignore
+11595 [INFO] Finished adding exclusions from SCM ignore files.
+11595 [INFO] 62 implicit excludes (use -debug for more details).
+11595 [INFO] Exclude: **/README.md
+11595 [INFO] Exclude: **/*.json
+11596 [INFO] Exclude: **/*.log
+11596 [INFO] Exclude: **/*.txt
+11596 [INFO] Exclude: **/*.story
+11596 [INFO] Exclude: **/*.editorconfig
+11596 [INFO] Exclude: **/src/vendor/**
+11596 [INFO] Exclude: **/yarn.lock
+11596 [INFO] Exclude: **/docker/Profile
+11596 [INFO] Exclude: **/docker/.env
+11596 [INFO] Exclude: **/docker/knox/**
+11596 [INFO] Exclude: **/node_modules/**
+11596 [INFO] Exclude: **/dist/**
+11601 [INFO] 43 resources included (use -debug for more details)
+11636 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 43 licenses.
+11636 [INFO] 
+11636 [INFO] ------------------------------------------------------------------------
+11636 [INFO] Building Ambari Logsearch Config Zookeeper 2.0.0.0-SNAPSHOT
+11636 [INFO] ------------------------------------------------------------------------
+11637 [INFO] 
+11637 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-config-zookeeper ---
+11644 [INFO] Enabled default license matchers.
+11644 [INFO] Will parse SCM ignores for exclusions...
+11644 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-config-zookeeper/.gitignore
+11645 [INFO] Finished adding exclusions from SCM ignore files.
+11645 [INFO] 62 implicit excludes (use -debug for more details).
+11645 [INFO] Exclude: **/README.md
+11645 [INFO] Exclude: **/*.json
+11645 [INFO] Exclude: **/*.log
+11645 [INFO] Exclude: **/*.txt
+11645 [INFO] Exclude: **/*.story
+11645 [INFO] Exclude: **/*.editorconfig
+11645 [INFO] Exclude: **/src/vendor/**
+11645 [INFO] Exclude: **/yarn.lock
+11645 [INFO] Exclude: **/docker/Profile
+11645 [INFO] Exclude: **/docker/.env
+11645 [INFO] Exclude: **/docker/knox/**
+11645 [INFO] Exclude: **/node_modules/**
+11645 [INFO] Exclude: **/dist/**
+11647 [INFO] 29 resources included (use -debug for more details)
+11674 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 29 licenses.
+11674 [INFO] 
+11675 [INFO] ------------------------------------------------------------------------
+11675 [INFO] Building Ambari Logsearch Log Feeder Plugin Api 2.0.0.0-SNAPSHOT
+11675 [INFO] ------------------------------------------------------------------------
+11675 [INFO] 
+11675 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-logfeeder-plugin-api ---
+11678 [INFO] Enabled default license matchers.
+11678 [INFO] Will parse SCM ignores for exclusions...
+11679 [INFO] Finished adding exclusions from SCM ignore files.
+11679 [INFO] 61 implicit excludes (use -debug for more details).
+11679 [INFO] Exclude: **/README.md
+11679 [INFO] Exclude: **/*.json
+11679 [INFO] Exclude: **/*.log
+11679 [INFO] Exclude: **/*.txt
+11679 [INFO] Exclude: **/*.story
+11679 [INFO] Exclude: **/*.editorconfig
+11679 [INFO] Exclude: **/src/vendor/**
+11679 [INFO] Exclude: **/yarn.lock
+11679 [INFO] Exclude: **/docker/Profile
+11679 [INFO] Exclude: **/docker/.env
+11679 [INFO] Exclude: **/docker/knox/**
+11679 [INFO] Exclude: **/node_modules/**
+11679 [INFO] Exclude: **/dist/**
+11680 [INFO] 14 resources included (use -debug for more details)
+11712 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 14 licenses.
+11712 [INFO] 
+11712 [INFO] ------------------------------------------------------------------------
+11712 [INFO] Building Ambari Logsearch Log Feeder 2.0.0.0-SNAPSHOT
+11712 [INFO] ------------------------------------------------------------------------
+11720 [INFO] 
+11720 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-logfeeder ---
+11723 [INFO] Enabled default license matchers.
+11723 [INFO] Will parse SCM ignores for exclusions...
+11723 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-logfeeder/.gitignore
+11723 [INFO] Finished adding exclusions from SCM ignore files.
+11723 [INFO] 62 implicit excludes (use -debug for more details).
+11724 [INFO] Exclude: **/README.md
+11724 [INFO] Exclude: **/*.json
+11724 [INFO] Exclude: **/*.log
+11724 [INFO] Exclude: **/*.txt
+11724 [INFO] Exclude: **/*.story
+11724 [INFO] Exclude: **/*.editorconfig
+11724 [INFO] Exclude: **/src/vendor/**
+11724 [INFO] Exclude: **/yarn.lock
+11724 [INFO] Exclude: **/docker/Profile
+11724 [INFO] Exclude: **/docker/.env
+11724 [INFO] Exclude: **/docker/knox/**
+11724 [INFO] Exclude: **/node_modules/**
+11724 [INFO] Exclude: **/dist/**
+11727 [INFO] 97 resources included (use -debug for more details)
+11803 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 97 licenses.
+11803 [INFO] 
+11803 [INFO] ------------------------------------------------------------------------
+11803 [INFO] Building Ambari Logsearch Web 2.0.0.0-SNAPSHOT
+11803 [INFO] ------------------------------------------------------------------------
+11823 [INFO] 
+11823 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-web ---
+11827 [INFO] Enabled default license matchers.
+11827 [INFO] Will parse SCM ignores for exclusions...
+11827 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-web/.gitignore
+11827 [INFO] Finished adding exclusions from SCM ignore files.
+11828 [INFO] 87 implicit excludes (use -debug for more details).
+11828 [INFO] Exclude: README.md
+11828 [INFO] Exclude: *.editorconfig
+11828 [INFO] Exclude: src/vendor/**
+11828 [INFO] Exclude: yarn.lock
+11828 [INFO] Exclude: node_modules/**
+11828 [INFO] Exclude: dist/**
+11828 [INFO] Exclude: **/*.json
+11828 [INFO] Exclude: **/*.log
+11828 [INFO] Exclude: **/*.txt
+11840 [INFO] 301 resources included (use -debug for more details)
+11937 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 92 licenses.
+11937 [INFO] 
+11937 [INFO] ------------------------------------------------------------------------
+11937 [INFO] Building Ambari Logsearch Server 2.0.0.0-SNAPSHOT
+11938 [INFO] ------------------------------------------------------------------------
+12021 [INFO] 
+12021 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-server ---
+12028 [INFO] Enabled default license matchers.
+12028 [INFO] Will parse SCM ignores for exclusions...
+12028 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-logsearch/ambari-logsearch-server/.gitignore
+12028 [INFO] Finished adding exclusions from SCM ignore files.
+12028 [INFO] 69 implicit excludes (use -debug for more details).
+12028 [INFO] Exclude: src/main/configsets/hadoop_logs/conf/managed-schema
+12028 [INFO] Exclude: **/*.log
+12028 [INFO] Exclude: **/*.json
+12034 [INFO] 322 resources included (use -debug for more details)
+12117 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 322 licenses.
+12117 [INFO] 
+12117 [INFO] ------------------------------------------------------------------------
+12117 [INFO] Building Ambari Logsearch Assembly 2.0.0.0-SNAPSHOT
+12117 [INFO] ------------------------------------------------------------------------
+12118 [INFO] 
+12118 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-assembly ---
+12121 [INFO] Enabled default license matchers.
+12121 [INFO] Will parse SCM ignores for exclusions...
+12121 [INFO] Finished adding exclusions from SCM ignore files.
+12121 [INFO] 61 implicit excludes (use -debug for more details).
+12121 [INFO] Exclude: **/README.md
+12121 [INFO] Exclude: **/*.json
+12121 [INFO] Exclude: **/*.log
+12121 [INFO] Exclude: **/*.txt
+12121 [INFO] Exclude: **/*.story
+12121 [INFO] Exclude: **/*.editorconfig
+12121 [INFO] Exclude: **/src/vendor/**
+12121 [INFO] Exclude: **/yarn.lock
+12121 [INFO] Exclude: **/docker/Profile
+12121 [INFO] Exclude: **/docker/.env
+12121 [INFO] Exclude: **/docker/knox/**
+12121 [INFO] Exclude: **/node_modules/**
+12121 [INFO] Exclude: **/dist/**
+12122 [INFO] 17 resources included (use -debug for more details)
+12134 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 17 licenses.
+12134 [INFO] 
+12134 [INFO] ------------------------------------------------------------------------
+12134 [INFO] Building Ambari Logsearch Integration Test 2.0.0.0-SNAPSHOT
+12134 [INFO] ------------------------------------------------------------------------
+12135 [INFO] 
+12135 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-logsearch-it ---
+12139 [INFO] Enabled default license matchers.
+12139 [INFO] Will parse SCM ignores for exclusions...
+12139 [INFO] Finished adding exclusions from SCM ignore files.
+12139 [INFO] 61 implicit excludes (use -debug for more details).
+12139 [INFO] Exclude: **/README.md
+12139 [INFO] Exclude: **/*.json
+12139 [INFO] Exclude: **/*.log
+12139 [INFO] Exclude: **/*.txt
+12139 [INFO] Exclude: **/*.story
+12139 [INFO] Exclude: **/*.editorconfig
+12139 [INFO] Exclude: **/src/vendor/**
+12139 [INFO] Exclude: **/yarn.lock
+12139 [INFO] Exclude: **/docker/Profile
+12139 [INFO] Exclude: **/docker/.env
+12139 [INFO] Exclude: **/docker/knox/**
+12139 [INFO] Exclude: **/node_modules/**
+12139 [INFO] Exclude: **/dist/**
+12140 [INFO] 13 resources included (use -debug for more details)
+12157 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 13 licenses.
+12158 [INFO] 
+12158 [INFO] ------------------------------------------------------------------------
+12158 [INFO] Building ambari-infra 2.0.0.0-SNAPSHOT
+12158 [INFO] ------------------------------------------------------------------------
+12158 [INFO] 
+12158 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-infra ---
+12161 [INFO] Enabled default license matchers.
+12162 [INFO] Will parse SCM ignores for exclusions...
+12162 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-infra/.gitignore
+12162 [INFO] Finished adding exclusions from SCM ignore files.
+12162 [INFO] 70 implicit excludes (use -debug for more details).
+12162 [INFO] Exclude: README.md
+12162 [INFO] Exclude: **/*.json
+12162 [INFO] Exclude: **/*.log
+12162 [INFO] Exclude: **/*.txt
+12162 [INFO] Exclude: **/docker/Profile
+12162 [INFO] Exclude: **/docker/.env
+12162 [INFO] Exclude: **/*.story
+12171 [INFO] 1 resources included (use -debug for more details)
+12188 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
+12188 [INFO] 
+12188 [INFO] ------------------------------------------------------------------------
+12188 [INFO] Building Ambari Infra Solr Client 2.0.0.0-SNAPSHOT
+12188 [INFO] ------------------------------------------------------------------------
+12189 [INFO] 
+12189 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-infra-solr-client ---
+12193 [INFO] Enabled default license matchers.
+12193 [INFO] Will parse SCM ignores for exclusions...
+12193 [INFO] Finished adding exclusions from SCM ignore files.
+12193 [INFO] 61 implicit excludes (use -debug for more details).
+12193 [INFO] Exclude: README.md
+12193 [INFO] Exclude: **/*.json
+12194 [INFO] Exclude: **/*.log
+12194 [INFO] Exclude: **/*.txt
+12194 [INFO] Exclude: **/docker/Profile
+12194 [INFO] Exclude: **/docker/.env
+12194 [INFO] Exclude: **/*.story
+12196 [INFO] 40 resources included (use -debug for more details)
+12242 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 40 licenses.
+12242 [INFO] 
+12242 [INFO] ------------------------------------------------------------------------
+12242 [INFO] Building Ambari Infra Solr Plugin 2.0.0.0-SNAPSHOT
+12242 [INFO] ------------------------------------------------------------------------
+12243 [INFO] 
+12243 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-infra-solr-plugin ---
+12247 [INFO] Enabled default license matchers.
+12247 [INFO] Will parse SCM ignores for exclusions...
+12247 [INFO] Finished adding exclusions from SCM ignore files.
+12247 [INFO] 61 implicit excludes (use -debug for more details).
+12247 [INFO] Exclude: README.md
+12247 [INFO] Exclude: **/*.json
+12247 [INFO] Exclude: **/*.log
+12247 [INFO] Exclude: **/*.txt
+12247 [INFO] Exclude: **/docker/Profile
+12247 [INFO] Exclude: **/docker/.env
+12247 [INFO] Exclude: **/*.story
+12248 [INFO] 7 resources included (use -debug for more details)
+12269 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 7 licenses.
+12269 [INFO] 
+12269 [INFO] ------------------------------------------------------------------------
+12269 [INFO] Building Ambari Infra Manager 2.0.0.0-SNAPSHOT
+12270 [INFO] ------------------------------------------------------------------------
+12271 [INFO] 
+12271 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-infra-manager ---
+12274 [INFO] Enabled default license matchers.
+12274 [INFO] Will parse SCM ignores for exclusions...
+12275 [INFO] Parsing exclusions from /home/travis/build/adoroszlai/ambari/ambari-infra/ambari-infra-manager/.gitignore
+12275 [INFO] Finished adding exclusions from SCM ignore files.
+12275 [INFO] 66 implicit excludes (use -debug for more details).
+12275 [INFO] Exclude: README.md
+12275 [INFO] Exclude: **/*.json
+12275 [INFO] Exclude: **/*.log
+12275 [INFO] Exclude: **/*.txt
+12275 [INFO] Exclude: **/docker/Profile
+12275 [INFO] Exclude: **/docker/.env
+12275 [INFO] Exclude: **/*.story
+12285 [INFO] 122 resources included (use -debug for more details)
+12338 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 118 licenses.
+12339 [INFO] 
+12339 [INFO] ------------------------------------------------------------------------
+12339 [INFO] Building Ambari Infra Assembly 2.0.0.0-SNAPSHOT
+12339 [INFO] ------------------------------------------------------------------------
+12341 [INFO] 
+12341 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-infra-assembly ---
+12344 [INFO] Enabled default license matchers.
+12345 [INFO] Will parse SCM ignores for exclusions...
+12345 [INFO] Finished adding exclusions from SCM ignore files.
+12345 [INFO] 61 implicit excludes (use -debug for more details).
+12345 [INFO] Exclude: README.md
+12345 [INFO] Exclude: **/*.json
+12345 [INFO] Exclude: **/*.log
+12345 [INFO] Exclude: **/*.txt
+12345 [INFO] Exclude: **/docker/Profile
+12345 [INFO] Exclude: **/docker/.env
+12345 [INFO] Exclude: **/*.story
+12346 [INFO] 19 resources included (use -debug for more details)
+12393 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 19 licenses.
+12394 [INFO] 
+12394 [INFO] ------------------------------------------------------------------------
+12394 [INFO] Building Ambari Infra Manager Integration Tests 2.0.0.0-SNAPSHOT
+12394 [INFO] ------------------------------------------------------------------------
+12395 [INFO] 
+12395 [INFO] --- apache-rat-plugin:0.12:check (default-cli) @ ambari-infra-manager-it ---
+12398 [INFO] Enabled default license matchers.
+12398 [INFO] Will parse SCM ignores for exclusions...
+12398 [INFO] Finished adding exclusions from SCM ignore files.
+12398 [INFO] 61 implicit excludes (use -debug for more details).
+12398 [INFO] Exclude: README.md
+12399 [INFO] Exclude: **/*.json
+12399 [INFO] Exclude: **/*.log
+12399 [INFO] Exclude: **/*.txt
+12399 [INFO] Exclude: **/docker/Profile
+12399 [INFO] Exclude: **/docker/.env
+12399 [INFO] Exclude: **/*.story
+12399 [INFO] 9 resources included (use -debug for more details)
+12421 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 9 licenses.
+12421 [INFO] ------------------------------------------------------------------------
+12421 [INFO] Reactor Summary:
+12421 [INFO] 
+12422 [INFO] Ambari Main ........................................ SUCCESS [  3.246 s]
+12422 [INFO] Apache Ambari Project POM .......................... SUCCESS [  0.092 s]
+12422 [INFO] Ambari Web ......................................... SUCCESS [  0.695 s]
+12422 [INFO] Ambari Views ....................................... SUCCESS [  0.074 s]
+12422 [INFO] Ambari Admin View .................................. SUCCESS [  0.058 s]
+12422 [INFO] ambari-utility ..................................... SUCCESS [  0.024 s]
+12422 [INFO] ambari-metrics ..................................... SUCCESS [  0.276 s]
+12423 [INFO] Ambari Metrics Common .............................. SUCCESS [  0.075 s]
+12423 [INFO] Ambari Metrics Hadoop Sink ......................... SUCCESS [  0.070 s]
+12423 [INFO] Ambari Metrics Flume Sink .......................... SUCCESS [  0.089 s]
+12423 [INFO] Ambari Metrics Kafka Sink .......................... SUCCESS [  0.032 s]
+12423 [INFO] Ambari Metrics Storm Sink .......................... SUCCESS [  0.025 s]
+12423 [INFO] Ambari Metrics Storm Sink (Legacy) ................. SUCCESS [  0.026 s]
+12424 [INFO] Ambari Metrics Collector ........................... SUCCESS [  0.127 s]
+12424 [INFO] Ambari Metrics Monitor ............................. SUCCESS [  0.073 s]
+12424 [INFO] Ambari Metrics Grafana ............................. SUCCESS [  0.044 s]
+12424 [INFO] Ambari Metrics Host Aggregator ..................... SUCCESS [  0.036 s]
+12425 [INFO] Ambari Metrics Assembly ............................ SUCCESS [  0.036 s]
+12425 [INFO] Ambari Service Advisor ............................. SUCCESS [  0.282 s]
+12425 [INFO] Ambari Server ...................................... SUCCESS [  2.525 s]
+12425 [INFO] Ambari Functional Tests ............................ SUCCESS [  0.067 s]
+12425 [INFO] Ambari Agent ....................................... SUCCESS [  0.452 s]
+12425 [INFO] ambari-logsearch ................................... SUCCESS [  0.077 s]
+12425 [INFO] Ambari Logsearch Appender .......................... SUCCESS [  0.036 s]
+12425 [INFO] Ambari Logsearch Config Api ........................ SUCCESS [  0.048 s]
+12426 [INFO] Ambari Logsearch Config Zookeeper .................. SUCCESS [  0.038 s]
+12426 [INFO] Ambari Logsearch Log Feeder Plugin Api ............. SUCCESS [  0.038 s]
+12426 [INFO] Ambari Logsearch Log Feeder ........................ SUCCESS [  0.091 s]
+12426 [INFO] Ambari Logsearch Web ............................... SUCCESS [  0.134 s]
+12426 [INFO] Ambari Logsearch Server ............................ SUCCESS [  0.180 s]
+12426 [INFO] Ambari Logsearch Assembly .......................... SUCCESS [  0.017 s]
+12426 [INFO] Ambari Logsearch Integration Test .................. SUCCESS [  0.023 s]
+12426 [INFO] ambari-infra ....................................... SUCCESS [  0.031 s]
+12427 [INFO] Ambari Infra Solr Client ........................... SUCCESS [  0.054 s]
+12427 [INFO] Ambari Infra Solr Plugin ........................... SUCCESS [  0.027 s]
+12427 [INFO] Ambari Infra Manager ............................... SUCCESS [  0.070 s]
+12427 [INFO] Ambari Infra Assembly .............................. SUCCESS [  0.055 s]
+12427 [INFO] Ambari Infra Manager Integration Tests ............. SUCCESS [  0.027 s]
+12427 [INFO] ------------------------------------------------------------------------
+12427 [INFO] BUILD SUCCESS
+12427 [INFO] ------------------------------------------------------------------------
+12427 [INFO] Total time: 10.661 s
+12427 [INFO] Finished at: 2018-03-22T15:53:41Z
+12615 [INFO] Final Memory: 35M/989M
+12615 [INFO] ------------------------------------------------------------------------

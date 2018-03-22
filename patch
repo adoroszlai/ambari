@@ -1,0 +1,21 @@
+From b2737efe61bf7c3e661b0bfea2d8dc02ac03b077 Mon Sep 17 00:00:00 2001
+From: "Doroszlai, Attila" <adoroszlai@apache.org>
+Date: Thu, 22 Mar 2018 16:50:59 +0100
+Subject: [PATCH] relative dir mismatch
+
+---
+ .travis.yml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.travis.yml b/.travis.yml
+index 51a08c21f9b..87dc97ed887 100644
+--- a/.travis.yml
++++ b/.travis.yml
+@@ -45,6 +45,6 @@ deploy:
+   skip-cleanup: true
+   github-token: $GITHUB_TOKEN
+   keep-history: true
+-  local-dir: build-results
++  local-dir: "../../../build-results"
+   on:
+     all_branches: true

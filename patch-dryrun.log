@@ -1,0 +1,9 @@
+Thu Mar 22 15:53:10 UTC 2018
+cd /home/travis/build/adoroszlai/ambari
+git apply --binary -v --check -p0 /home/travis/build-results/patch
+Checking patch a/.travis.yml => b/.travis.yml...
+error: a/.travis.yml: No such file or directory
+Thu Mar 22 15:53:10 UTC 2018
+cd /home/travis/build/adoroszlai/ambari
+git apply --binary -v --check -p1 /home/travis/build-results/patch
+Checking patch .travis.yml...

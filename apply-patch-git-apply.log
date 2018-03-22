@@ -1,0 +1,7 @@
+Thu Mar 22 15:53:23 UTC 2018
+cd /home/travis/build/adoroszlai/ambari
+git apply --binary -v --stat --apply -p1 /home/travis/build-results/patch
+Checking patch .travis.yml...
+Applied patch .travis.yml cleanly.
+ .travis.yml |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
