@@ -37,7 +37,7 @@ install:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./dev-support/yetus-downloader; git checkout HEAD^; fi'
 
 script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./dev-support/test-patch.sh --run-tests --mv-patch-dir "https://github.com/${TRAVIS_REPO_SLUG}/commit/${TRAVIS_COMMIT}.patch"; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then travis_wait 30 ./dev-support/test-patch.sh --dirty-workspace --run-tests --mv-patch-dir "https://github.com/${TRAVIS_REPO_SLUG}/commit/${TRAVIS_COMMIT}.patch"; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then mvn -B --fail-fast -Del.log=WARN -Drat.consoleOutput=true clean package; fi'
 
 deploy:
