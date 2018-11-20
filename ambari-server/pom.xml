@@ -233,7 +233,6 @@
       </plugin>
       <plugin>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>2.6</version>
         <executions>
           <execution>
             <id>copy-resources</id>
@@ -314,6 +313,7 @@
                   </includes>
                 </resource>
               </resources>
+              <skip>${swagger.skip}</skip>
             </configuration>
           </execution>
         </executions>
@@ -442,7 +442,6 @@
       <plugin>
         <groupId>io.swagger</groupId>
         <artifactId>swagger-codegen-maven-plugin</artifactId>
-        <version>2.2.2</version>
         <executions>
           <execution>
             <id>generate-swagger-html2</id>
@@ -454,6 +453,7 @@
               <inputSpec>${swagger.spec.dir}/swagger.json</inputSpec>
               <language>html2</language>
               <output>${swagger.generated.resources.dir}</output>
+              <skip>${swagger.skip}</skip>
             </configuration>
           </execution>
         </executions>
@@ -870,7 +870,6 @@
         <plugins>
           <plugin>
             <artifactId>maven-resources-plugin</artifactId>
-            <version>2.6</version>
             <executions>
               <execution>
                 <id>copy-swagger-generated-html</id>
