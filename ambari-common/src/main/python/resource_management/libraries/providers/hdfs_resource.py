@@ -216,7 +216,7 @@ class WebHDFSUtil:
     
   @staticmethod
   def is_webhdfs_available(is_webhdfs_enabled, default_protocol):
-    return (is_webhdfs_enabled and default_protocol in DFS_WHICH_SUPPORT_WEBHDFS)
+    return (is_webhdfs_enabled and default_protocol and default_protocol.lower() in DFS_WHICH_SUPPORT_WEBHDFS)
 
   def run_command(self, *args, **kwargs):
     """
